@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Poppins, Lora } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 const poppins = Poppins({
@@ -19,8 +21,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "HookHub — Claude Code Hooks",
-  description: "Discover community-built hooks for Claude Code",
+  title: "HookHub | Claude Code Hooks",
+  description: "Discover and share Claude Code hooks to enhance your AI-powered development workflows",
 };
 
 export default function RootLayout({
@@ -30,7 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}>
+      <body
+        className={`${poppins.variable} ${lora.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
