@@ -14,12 +14,6 @@ const lora = Lora({
   weight: ["400", "500", "600"],
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["600", "700"],
-});
-
 export const metadata: Metadata = {
   title: "HookHub | Claude Code Hooks",
   description: "Discover and share Claude Code hooks to enhance your AI-powered development workflows",
